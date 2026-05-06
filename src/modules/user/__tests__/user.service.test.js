@@ -12,7 +12,7 @@ describe('User Service - Cadastro',() => {
     }); 
 
     it('deve retornar um erro se as senhas forem diferentes', async () => {
-        const data ={
+        const data = {
             username: 'soficris', 
             email: 'soficris@example.com',
             password: 'password123',
