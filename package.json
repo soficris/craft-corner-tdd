@@ -31,6 +31,7 @@
     "sequelize": "^6.37.8"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.5",
     "@vitest/ui": "^4.1.5",
     "happy-dom": "^20.9.0",
     "nodemon": "^3.1.14",
