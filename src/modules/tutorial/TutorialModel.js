@@ -1,5 +1,5 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('../../config/database');
+import { DataTypes } from "sequelize";
+import sequelize from "../../config/database.js";
 
 const Tutorial = sequelize.define("Tutorial", {
   id: {
@@ -9,7 +9,8 @@ const Tutorial = sequelize.define("Tutorial", {
   },
   titulo: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false, 
+    unique: true
   },
   descricao: DataTypes.TEXT,
   materiais: DataTypes.TEXT, // pode salvar JSON string

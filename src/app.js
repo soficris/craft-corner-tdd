@@ -5,6 +5,7 @@ import logger from 'morgan';
 import session from 'express-session';
 import flash from 'connect-flash';
 import expressLayouts from 'express-ejs-layouts';
+import tutorialRoutes from "./modules/tutorial/tutorialRoutes";
 
 const app = express();
 
@@ -38,6 +39,7 @@ next();
 
 // Rotas (vamos adicionar mais depois)
 app.get('/', (req, res) => res.render('index', { title: 'Craft Corner - TDD' }));
+app.use("/tutorial", tutorialRoutes); 
 // 404
 app.use((req, res) => res.status(404).render('error'));
 
